@@ -8,21 +8,21 @@ const Box = () => {
   const { backgroundColor, width, height,marginLeft, borderRadius } = useSelector((state) => state.box)
 
   return (
-    <div className="flex justify-center items-center h-[100lvh] bg-gradient-to-r from-gray-100 to-white">
-  <div className="p-6 rounded-2xl shadow-xl bg-white border border-gray-200 space-y-4 w-full max-w-md">
-    <h2 className="text-2xl font-semibold text-gray-800 text-center">Customize Box</h2>
+    <div className="flex justify-center items-center h-[100lvh] bg-gradient-to-br from-indigo-100 via-white to-blue-100">
+  <div className="p-6 rounded-2xl shadow-2xl bg-white border border-gray-200 space-y-6 w-full max-w-md">
+    <h2 className="text-2xl font-bold text-indigo-700 text-center">🎨 Box Styler</h2>
 
-    <div className="flex flex-wrap justify-center gap-5">
+    <div className="flex flex-wrap justify-center gap-3">
       <button
         onClick={() => dispatch(incrementHeight())}
-        className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+        className="px-4 py-2 bg-indigo-600 text-white rounded-xl shadow hover:bg-indigo-700 transition"
       >
         + Increase Height
       </button>
 
       <button
         onClick={() => dispatch(incrementWidth())}
-        className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+        className="px-4 py-2 bg-indigo-600 text-white rounded-xl shadow hover:bg-indigo-700 transition"
       >
         + Increase Width
       </button>
@@ -30,27 +30,27 @@ const Box = () => {
       <input
         type="text"
         onChange={(e) => dispatch(changeColor(e.target.value))}
-        placeholder="Change Color"
-        className="px-3 py-2 bg-gray-100 text-black border rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
+        placeholder="change color"
+        className="px-3 py-2 w-full text-sm bg-gray-100 text-gray-700 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-400"
       />
 
       <button
         onClick={() => dispatch(incrementMarginLeft())}
-        className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+        className="px-4 py-2 bg-indigo-600 text-white rounded-xl shadow hover:bg-indigo-700 transition"
       >
         Change Margin
       </button>
 
       <button
         onClick={() => dispatch(changeBorderRadius())}
-        className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+        className="px-4 py-2 bg-indigo-600 text-white rounded-xl shadow hover:bg-indigo-700 transition"
       >
         Change Radius
       </button>
     </div>
 
     <div
-      className="transition-all duration-500 mx-auto"
+      className="transition-all duration-500 mx-auto border border-gray-300"
       style={{
         backgroundColor,
         width,
@@ -61,6 +61,7 @@ const Box = () => {
     />
   </div>
 </div>
+
 
     
   )
